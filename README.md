@@ -36,6 +36,7 @@ Minimal backend scaffold for OAuth 2.0 auth, token encryption, basic GHL API cal
 - Confirm actual GHL token response fields (account/location IDs).
 - Add request validation and per-user rate limiting.
 - Implement webhook event handling.
+- For Vercel, deploy using the serverless entry in `api/index.js`.
 
 ## Expected DB schema (example)
 ```
@@ -59,4 +60,3 @@ Table: ghl_connections
 - Confirm scopes and supported webhook signature header
 - Set up HTTPS for production
 - Set up database and migrate token store
-

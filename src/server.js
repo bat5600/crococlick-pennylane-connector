@@ -40,6 +40,10 @@ app.use((err, req, res, next) => {
   res.status(status).json({ error: err.message || 'Internal Server Error' });
 });
 
-app.listen(config.port, () => {
-  console.log(`GHL connector listening on port ${config.port}`);
-});
+if (require.main === module) {
+  app.listen(config.port, () => {
+    console.log(`GHL connector listening on port ${config.port}`);
+  });
+}
+
+module.exports = app;
